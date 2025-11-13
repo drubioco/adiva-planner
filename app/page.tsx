@@ -67,7 +67,7 @@ export default function Page(){
     const meses = rangeMonths(start, end);
 
     let cashAnt = cashInicial;
-    const arr = [];
+    const arr: any[] = [];
 
     const cuotaCapital = creditoON ? (creditoImporte / creditoCuotas) : 0;
 
