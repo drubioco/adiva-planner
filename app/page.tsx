@@ -14,15 +14,15 @@ import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContai
 // ===========================
 // Utilidades
 // ===========================
-const eur = (n) => new Intl.NumberFormat("es-ES", { style: "currency", currency: "EUR", maximumFractionDigits: 2 }).format(Number(n || 0));
+const eur = (n: number) => new Intl.NumberFormat("es-ES", { style: "currency", currency: "EUR", maximumFractionDigits: 2 }).format(Number(n || 0));
 
-function monthDiff(from, to){
+function monthDiff(from: Date, to: Date){
   const a = new Date(from.getFullYear(), from.getMonth(), 1);
   const b = new Date(to.getFullYear(), to.getMonth(), 1);
   return (b.getFullYear() - a.getFullYear())*12 + (b.getMonth() - a.getMonth());
 }
 
-function rangeMonths(start, end){
+function rangeMonths(start: Date, end: Date){
   const out = [];
   const d0 = new Date(start.getFullYear(), start.getMonth(), 1);
   const d1 = new Date(end.getFullYear(), end.getMonth(), 1);
